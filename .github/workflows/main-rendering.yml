@@ -87,6 +87,7 @@ jobs:
           host: ${{ secrets.DEPLOY_DOCS_HOST }}
           username: ${{ secrets.DEPLOY_DOCS_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
+          command_timeout: 15m
           script: |
             export APP_ENV=prod
             export APP_SECRET=${{ secrets.DOC_SEARCH_APP_SECRET }}
